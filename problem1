@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char package;
+	double hour;
+	
+	cout << "Enter Package: ";
+	cin >> package;
+	
+	cout << "Enter hours consumed: ";
+	cin >> hour;
+	
+	switch (package)
+	{
+		case 'a':
+		case 'A':
+			if (hour>10)
+			   cout << "Total amount due: Php " << 995 + (hour*20);
+			else if (hour<0) 
+	 		   cout << "Invalid!";
+			else
+				cout << "Total amount due: Php 995.00";	
+			break;
+		
+		case 'b':
+		case 'B':
+			if (hour>20)
+			   cout << "Total amount due: Php " << 1495 + (hour*10);
+			else if (hour<0) 
+	 		   cout << "Invalid!";
+			else
+				cout << "Total amount due: Php 1495.00 ";
+			break;			
+		
+		case 'c':
+		case 'C':
+			 if (hour<0)	
+	 		   cout << "Invalid!";
+			 else 
+			   cout << "Total amount due: Php 1995.00 ";
+		
+		default:
+			cout << "Invalid!";
+			break;	   
+			 	
+	}
+	
+return 0;
+}
