@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n1=0, n2=1, n;
+	
+	cout << "Fibonacci numbers: " << endl;
+	
+	for(n=1;n<=10946;n++)
+	{
+		if (n==1)
+		   cout << n1 << ", ";
+        
+	    if (n==2)
+	       cout << n2 << ", ";
+	    
+	    n=n1+n2;
+	    n1=n2;
+	    n2=n;
+	    
+		if (n<10946)
+		   cout << n << ", ";
+		else	 
+ 	       cout <<n;
+	}
+	
+	return 0;
+	
+}
